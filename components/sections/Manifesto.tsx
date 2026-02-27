@@ -86,7 +86,7 @@ export default function Manifesto() {
               }}
             >
               <h3
-                className="sm:w-[30%] shrink-0 font-body text-xs font-bold uppercase tracking-widest"
+                className="sm:w-[30%] shrink-0 font-display text-display-sm"
                 style={{ color: pillar.color }}
               >
                 {pillar.prefix}

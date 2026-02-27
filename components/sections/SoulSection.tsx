@@ -23,6 +23,7 @@ export default function SoulSection() {
       ref={sectionRef}
       style={{ backgroundColor: bgColor }}
       className="relative min-h-screen overflow-hidden"
+      data-theme="light"
     >
       {/* Background Video — blended into ivory sand */}
       <video

@@ -82,9 +82,9 @@ export default function Navbar() {
             <Image
               src="/images/delaislalogo1.svg"
               alt="De La Isla"
-              width={140}
-              height={155}
-              className="w-[100px] md:w-[140px] h-auto"
+              width={60}
+              height={66}
+              className="w-[44px] md:w-[60px] h-auto"
               priority
             />
           </Link>

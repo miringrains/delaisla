@@ -71,7 +71,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${bigBird.variable} ${manrope.variable} grain`}>
+      <body className={`${bigBird.variable} ${manrope.variable}`}>
         {children}
       </body>
     </html>

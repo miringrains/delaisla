@@ -20,6 +20,15 @@ export default function Hero() {
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/45" />
 
+      {/* Grain Texture — looping GIF, multiply blend, below content */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/images/grain.gif"
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover pointer-events-none opacity-[0.06] mix-blend-multiply"
+      />
+
       {/* Content */}
       <div className="absolute bottom-16 left-6 md:bottom-24 md:left-10 z-10 max-w-3xl">
         <motion.h1

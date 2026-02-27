@@ -1,29 +1,34 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "motion/react";
 
 const PILLARS = [
   {
     prefix: "TU",
     word: "RITMO",
+    icon: "/images/pillars/ritmo.svg",
     color: "#F8CA56",
     description: "Work, travel, and the daily hustle.",
   },
   {
     prefix: "TU",
     word: "FUEGO",
+    icon: "/images/pillars/fuego.svg",
     color: "#E13754",
     description: "Engineered for training and peak performance.",
   },
   {
     prefix: "TU",
     word: "MOMENTO",
+    icon: "/images/pillars/momento.svg",
     color: "#FAE8AC",
     description: "Built for performers and rapid recovery.",
   },
   {
     prefix: "TU",
     word: "NOCHE",
+    icon: "/images/pillars/noche.svg",
     color: "#43EAF1",
     description: "Designed for late nights, festivals, and sustained hydration.",
   },
@@ -85,15 +90,24 @@ export default function Manifesto() {
                 ease: [0.25, 0.1, 0.25, 1],
               }}
             >
-              <h3
-                className="sm:w-[30%] shrink-0 font-display text-display-sm"
-                style={{ color: pillar.color }}
-              >
-                {pillar.prefix}
-                <br />
-                {pillar.word}
-              </h3>
-              <p className="text-heading-md text-brand leading-snug sm:pt-2">
+              <div className="sm:w-[35%] shrink-0 flex items-center gap-4">
+                <Image
+                  src={pillar.icon}
+                  alt=""
+                  width={48}
+                  height={48}
+                  className="w-10 h-10 md:w-12 md:h-12"
+                />
+                <h3
+                  className="font-display text-display-sm"
+                  style={{ color: pillar.color }}
+                >
+                  {pillar.prefix}
+                  <br />
+                  {pillar.word}
+                </h3>
+              </div>
+              <p className="text-heading-md text-brand leading-snug sm:pt-1">
                 {pillar.description}
               </p>
             </motion.div>

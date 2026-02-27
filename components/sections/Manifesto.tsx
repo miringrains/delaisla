@@ -1,0 +1,94 @@
+"use client";
+
+import { motion } from "motion/react";
+
+const PILLARS = [
+  {
+    name: "TU RITMO",
+    description: "Work, travel, and the daily hustle.",
+  },
+  {
+    name: "TU FUEGO",
+    description: "Engineered for training and peak performance.",
+  },
+  {
+    name: "TU MOMENTO",
+    description: "Built for performers and rapid recovery.",
+  },
+  {
+    name: "TU NOCHE",
+    description: "Designed for late nights, festivals, and sustained hydration.",
+  },
+] as const;
+
+export default function Manifesto() {
+  return (
+    <section className="bg-surface-dark py-32 md:py-48 px-6 md:px-10">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-0">
+        {/* Left — Sticky headline block (cols 1-5) */}
+        <div className="md:col-span-5 mb-16 md:mb-0">
+          <div className="md:sticky md:top-32">
+            <motion.h2
+              className="font-display text-display-xl text-brand"
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
+            >
+              EL
+              <br />
+              MOVIMIENTO
+              <br />
+              LLEGÓ.
+            </motion.h2>
+
+            <motion.p
+              className="mt-8 max-w-sm text-body-sm text-brand/50 tracking-wide leading-relaxed"
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{
+                duration: 0.7,
+                delay: 0.15,
+                ease: [0.25, 0.1, 0.25, 1],
+              }}
+            >
+              A hydration stick brand that blends molecular hydrogen with a
+              clean electrolyte system. Zero sugar, zero calorie, non-GMO.
+            </motion.p>
+          </div>
+        </div>
+
+        {/* Void — col 6 */}
+        <div className="hidden md:block md:col-span-1" />
+
+        {/* Right — Pillars (cols 7-12) */}
+        <div className="md:col-span-6">
+          {PILLARS.map((pillar, i) => (
+            <motion.div
+              key={pillar.name}
+              className="flex flex-col sm:flex-row gap-4 sm:gap-0 border-t border-brand/20 py-8 md:py-10"
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{
+                duration: 0.5,
+                delay: i * 0.08,
+                ease: [0.25, 0.1, 0.25, 1],
+              }}
+            >
+              <span className="sm:w-[30%] shrink-0 text-overline font-bold uppercase text-brand/60">
+                {pillar.name}
+              </span>
+              <p className="text-heading-md text-brand leading-snug">
+                {pillar.description}
+              </p>
+            </motion.div>
+          ))}
+          {/* Bottom border to close the last row */}
+          <div className="border-t border-brand/20" />
+        </div>
+      </div>
+    </section>
+  );
+}

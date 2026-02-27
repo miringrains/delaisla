@@ -100,18 +100,26 @@ export default function Navbar() {
       />
 
       <div className="grid grid-cols-3 items-center">
-        {/* Left — Navigation Links */}
+        {/* Left — Hamburger (mobile) / Text links (desktop) */}
         <div className="flex items-center gap-6">
+          <button
+            type="button"
+            aria-label="Menu"
+            className="md:hidden flex flex-col justify-center gap-[6px] transition-opacity duration-300 hover:opacity-60"
+          >
+            <span className="block w-7 h-[1px] bg-current" />
+            <span className="block w-7 h-[1px] bg-current" />
+          </button>
           <Link
             href="/shop"
-            className="text-overline font-bold uppercase transition-opacity duration-300 hover:opacity-60"
+            className="hidden md:block text-overline font-bold uppercase transition-opacity duration-300 hover:opacity-60"
             style={{ color: "inherit" }}
           >
             SHOP
           </Link>
           <Link
             href="/culture"
-            className="text-overline font-bold uppercase transition-opacity duration-300 hover:opacity-60"
+            className="hidden md:block text-overline font-bold uppercase transition-opacity duration-300 hover:opacity-60"
             style={{ color: "inherit" }}
           >
             CULTURE

@@ -31,7 +31,7 @@ export default function Manifesto() {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-0">
         {/* Left — Sticky headline block (cols 1-5) */}
         <div className="md:col-span-5 mb-16 md:mb-0">
-          <div className="md:sticky md:top-32">
+          <div className="md:sticky md:top-32 flex flex-col justify-between h-auto md:h-[80vh]">
             <motion.h2
               className="font-display text-display-xl text-brand"
               initial={{ opacity: 0, y: 24 }}
@@ -47,7 +47,7 @@ export default function Manifesto() {
             </motion.h2>
 
             <motion.p
-              className="mt-8 max-w-sm text-body-sm text-brand/50 tracking-wide leading-relaxed"
+              className="mt-8 md:mt-0 max-w-[280px] text-body-sm text-brand/70 tracking-wide leading-relaxed"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}

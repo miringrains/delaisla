@@ -6,21 +6,25 @@ const PILLARS = [
   {
     prefix: "TU",
     word: "RITMO",
+    color: "#F8CA56",
     description: "Work, travel, and the daily hustle.",
   },
   {
     prefix: "TU",
     word: "FUEGO",
+    color: "#E13754",
     description: "Engineered for training and peak performance.",
   },
   {
     prefix: "TU",
     word: "MOMENTO",
+    color: "#FAE8AC",
     description: "Built for performers and rapid recovery.",
   },
   {
     prefix: "TU",
     word: "NOCHE",
+    color: "#43EAF1",
     description: "Designed for late nights, festivals, and sustained hydration.",
   },
 ] as const;
@@ -31,7 +35,7 @@ export default function Manifesto() {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-0">
         {/* Left — Sticky headline block (cols 1-5) */}
         <div className="md:col-span-5 mb-16 md:mb-0">
-          <div className="md:sticky md:top-32 flex flex-col justify-between h-auto md:h-[80vh]">
+          <div className="md:sticky md:top-24 flex flex-col justify-between h-auto md:h-[calc(100vh-12rem)]">
             <motion.h2
               className="font-display text-display-xl text-brand"
               initial={{ opacity: 0, y: 24 }}
@@ -47,7 +51,7 @@ export default function Manifesto() {
             </motion.h2>
 
             <motion.p
-              className="mt-8 md:mt-0 max-w-[280px] text-body-sm text-brand/70 tracking-wide leading-relaxed"
+              className="mt-8 md:mt-0 max-w-sm text-body-sm text-brand/70 tracking-wide leading-relaxed"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -81,7 +85,10 @@ export default function Manifesto() {
                 ease: [0.25, 0.1, 0.25, 1],
               }}
             >
-              <h3 className="sm:w-[30%] shrink-0 font-display text-display-sm text-brand/80">
+              <h3
+                className="sm:w-[30%] shrink-0 font-body text-xs font-bold uppercase tracking-widest"
+                style={{ color: pillar.color }}
+              >
                 {pillar.prefix}
                 <br />
                 {pillar.word}

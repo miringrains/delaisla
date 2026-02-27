@@ -80,7 +80,7 @@ export default function Manifesto() {
           {PILLARS.map((pillar, i) => (
             <motion.div
               key={pillar.word}
-              className="flex flex-col sm:flex-row items-start gap-4 sm:gap-0 border-t border-brand/20 py-8 md:py-10"
+              className="flex flex-col sm:flex-row sm:items-end gap-4 sm:gap-0 border-t border-brand/20 py-8 md:py-10"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
@@ -107,7 +107,7 @@ export default function Manifesto() {
                   {pillar.word}
                 </h3>
               </div>
-              <p className="text-heading-md text-brand leading-snug sm:pt-1">
+              <p className="text-heading-md text-brand leading-snug">
                 {pillar.description}
               </p>
             </motion.div>

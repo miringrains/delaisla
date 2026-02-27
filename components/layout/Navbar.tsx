@@ -91,12 +91,11 @@ export default function Navbar() {
       animate={{ color: textColor }}
       transition={{ duration: 0.4, ease: "easeInOut" }}
     >
-      {/* Gradient blur — fades from full blur at top to zero at bottom */}
       <div
-        className="absolute inset-0 h-[150%] -z-10 backdrop-blur-xl pointer-events-none"
+        className="absolute inset-0 h-[120%] -z-10 backdrop-blur-[2px] pointer-events-none"
         style={{
-          maskImage: "linear-gradient(to bottom, black 40%, transparent 100%)",
-          WebkitMaskImage: "linear-gradient(to bottom, black 40%, transparent 100%)",
+          maskImage: "linear-gradient(to bottom, black 20%, transparent 100%)",
+          WebkitMaskImage: "linear-gradient(to bottom, black 20%, transparent 100%)",
         }}
       />
 

@@ -91,6 +91,15 @@ export default function Navbar() {
       animate={{ color: textColor }}
       transition={{ duration: 0.4, ease: "easeInOut" }}
     >
+      {/* Gradient blur — fades from full blur at top to zero at bottom */}
+      <div
+        className="absolute inset-0 h-[150%] -z-10 backdrop-blur-xl pointer-events-none"
+        style={{
+          maskImage: "linear-gradient(to bottom, black 40%, transparent 100%)",
+          WebkitMaskImage: "linear-gradient(to bottom, black 40%, transparent 100%)",
+        }}
+      />
+
       <div className="grid grid-cols-3 items-center">
         {/* Left — Navigation Links */}
         <div className="flex items-center gap-6">

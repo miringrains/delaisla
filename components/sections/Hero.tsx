@@ -26,11 +26,11 @@ export default function Hero() {
         src="/images/grain.gif"
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 h-full w-full object-cover pointer-events-none opacity-[0.06] mix-blend-multiply"
+        className="absolute inset-0 h-full w-full object-cover pointer-events-none opacity-[0.01] mix-blend-multiply"
       />
 
       {/* Content */}
-      <div className="absolute bottom-16 left-6 md:bottom-24 md:left-10 z-10 max-w-3xl">
+      <div className="absolute bottom-16 left-6 right-6 md:bottom-24 md:left-10 md:right-10 z-10 max-w-3xl">
         <motion.h1
           className="font-display text-display-hero text-brand"
           initial={{ opacity: 0, y: 20 }}

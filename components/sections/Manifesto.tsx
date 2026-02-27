@@ -4,19 +4,23 @@ import { motion } from "motion/react";
 
 const PILLARS = [
   {
-    name: "TU RITMO",
+    prefix: "TU",
+    word: "RITMO",
     description: "Work, travel, and the daily hustle.",
   },
   {
-    name: "TU FUEGO",
+    prefix: "TU",
+    word: "FUEGO",
     description: "Engineered for training and peak performance.",
   },
   {
-    name: "TU MOMENTO",
+    prefix: "TU",
+    word: "MOMENTO",
     description: "Built for performers and rapid recovery.",
   },
   {
-    name: "TU NOCHE",
+    prefix: "TU",
+    word: "NOCHE",
     description: "Designed for late nights, festivals, and sustained hydration.",
   },
 ] as const;
@@ -66,8 +70,8 @@ export default function Manifesto() {
         <div className="md:col-span-6">
           {PILLARS.map((pillar, i) => (
             <motion.div
-              key={pillar.name}
-              className="flex flex-col sm:flex-row gap-4 sm:gap-0 border-t border-brand/20 py-8 md:py-10"
+              key={pillar.word}
+              className="flex flex-col sm:flex-row items-start gap-4 sm:gap-0 border-t border-brand/20 py-8 md:py-10"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
@@ -77,10 +81,12 @@ export default function Manifesto() {
                 ease: [0.25, 0.1, 0.25, 1],
               }}
             >
-              <span className="sm:w-[30%] shrink-0 text-overline font-bold uppercase text-brand/60">
-                {pillar.name}
-              </span>
-              <p className="text-heading-md text-brand leading-snug">
+              <h3 className="sm:w-[30%] shrink-0 font-display text-display-sm text-brand/80">
+                {pillar.prefix}
+                <br />
+                {pillar.word}
+              </h3>
+              <p className="text-heading-md text-brand leading-snug sm:pt-2">
                 {pillar.description}
               </p>
             </motion.div>
